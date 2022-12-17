@@ -1,0 +1,43 @@
+@import '/src/styles/variables';
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 39px;
+  font-family: $conv-gilroy-light;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+
+  .header-nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    margin-right: 70px;
+  }
+
+  .nav-link {
+    margin-right: 49px;
+    text-decoration: none;
+    color: $dark-brown;
+    transition: .3s;
+
+    &:hover {
+      color: $light-orange;
+    }
+  }
+
+  .phone-link {
+    margin-right: 45px;
+    text-decoration: none;
+    color: $dark-brown;
+    transition: .3s;
+
+    &:hover {
+      color: $light-orange;
+    }
+  }
+}
