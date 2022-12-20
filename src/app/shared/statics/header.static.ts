@@ -1,4 +1,4 @@
-import { HeaderNavLinks } from '../models/header.model';
+import {HeaderNavLinks, LanguagesOptions} from '../models/header.model';
 
 export const HEADER_NAV_LINKS: HeaderNavLinks[] = [
     {
@@ -13,5 +13,14 @@ export const HEADER_NAV_LINKS: HeaderNavLinks[] = [
         text: 'Pricing',
         link: '/pricing'
     },
+]
+
+export const LANGUAGES_OPTIONS: LanguagesOptions[] = [
+  {
+    lang: 'EN'
+  },
+  {
+    lang: 'UA'
+  },
 ]
 
