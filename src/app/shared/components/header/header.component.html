@@ -1,0 +1,16 @@
+<header class='header'>
+  <nav class='header-nav'>
+    <a routerLink='/'><img class='logo' src='assets/images/logo.svg' alt='logo'></a>
+    <ng-container *ngFor='let link of headerNavLinks'>
+      <a href='#' class='nav-link'>{{ link.text }}</a>
+    </ng-container>
+  </nav>
+  <div class='options'>
+    <a class='phone-link' href='tel:+3035550105'>(303) 555-0105</a>
+    <select>
+      <ng-container *ngFor="let lang of languagesOptions">
+        <option>{{ lang.lang }}</option>
+      </ng-container>
+    </select>
+  </div>
+</header>
