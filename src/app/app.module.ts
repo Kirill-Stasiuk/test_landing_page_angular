@@ -5,7 +5,8 @@ import { AppRoutingModule } from "./app-routing.module"
 import { AppComponent } from "./app.component"
 import { HeaderComponent } from "./shared/components/header/header.component"
 import { FooterComponent } from "./shared/components/footer/footer.component"
-import { HomePageComponent } from "./pages/home-page/components/home-page/home-page.component"
+import { HomePageComponent } from "./pages/home-page/components/home-page/home-page.component";
+import { ButtonComponent } from './shared/components/button/button.component'
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { HomePageComponent } from "./pages/home-page/components/home-page/home-p
     HeaderComponent,
     FooterComponent,
     HomePageComponent,
+    ButtonComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

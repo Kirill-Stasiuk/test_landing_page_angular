@@ -1,3 +1,35 @@
-.dashboard-wrap {
+@import "/src/styles/variables";
+
+.home-wrap {
   display: flex;
+
+  .home-title {
+    width: 479px;
+    font-family: $conv-bn-chester;
+    font-weight: 400;
+    font-size: 66px;
+    line-height: 64px;
+    letter-spacing: 0.01em;
+    color: $brown;
+    margin-bottom: 32px;
+  }
+
+  .text {
+    width: 382px;
+    font-family: $conv-gilroy-light;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 170%;
+    color: $black;
+    margin-bottom: 54px;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 835px;
+    height: 805px;
+  }
 }
