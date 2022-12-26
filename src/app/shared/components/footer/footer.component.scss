@@ -55,6 +55,11 @@ footer {
     line-height: 17px;
     color: $black;
     margin-bottom: 20px;
+    transition: .3s;
+
+    &:hover {
+      color: $light-orange;
+    }
   }
 
   .social-link {

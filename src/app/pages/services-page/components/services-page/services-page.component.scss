@@ -1,0 +1,53 @@
+@import 'src/styles/variables';
+
+.service-title {
+  font-family: $conv-bn-chester;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 41px;
+  text-align: center;
+  letter-spacing: 0.005em;
+  color: $black;
+  margin-bottom: 84px;
+
+  span {
+    color: $light-orange;
+  }
+}
+.services {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 84px;
+
+  .services-image {
+    margin-bottom: 42px;
+  }
+
+  .services-desc {
+    text-align: center;
+  }
+
+  .services-title {
+    font-family: $conv-gilroy-light;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: $black;
+    margin-bottom: 19px;
+  }
+
+  .services-subtitle {
+    width: 270px;
+    font-family: $conv-gilroy-light;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 170%;
+    color: $grey;
+  }
+}
+.services-button {
+  text-align: center;
+  margin-bottom: 80px;
+}

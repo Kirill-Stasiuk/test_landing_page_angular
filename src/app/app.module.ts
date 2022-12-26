@@ -5,8 +5,9 @@ import { AppRoutingModule } from "./app-routing.module"
 import { AppComponent } from "./app.component"
 import { HeaderComponent } from "./shared/components/header/header.component"
 import { FooterComponent } from "./shared/components/footer/footer.component"
-import { HomePageComponent } from "./pages/home-page/components/home-page/home-page.component";
-import { ButtonComponent } from './shared/components/button/button.component'
+import { HomePageComponent } from "./pages/home-page/components/home-page/home-page.component"
+import { ButtonComponent } from "./shared/components/button/button.component"
+import { ServicesPageComponent } from "./pages/services-page/components/services-page/services-page.component"
 
 @NgModule({
   declarations: [
@@ -14,10 +15,12 @@ import { ButtonComponent } from './shared/components/button/button.component'
     HeaderComponent,
     FooterComponent,
     HomePageComponent,
+    ServicesPageComponent,
     ButtonComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
+  exports: [ButtonComponent],
 })
 export class AppModule {}
