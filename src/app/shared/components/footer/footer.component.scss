@@ -1,0 +1,95 @@
+@import "src/styles/variables";
+
+footer {
+  background-color: #F4F4F4;
+  padding: 94px 0;
+
+  .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .info-img {
+    margin-bottom: 60px;
+  }
+
+  .info-text {
+    width: 300px;
+    font-family: $conv-gilroy-light;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 170%;
+    color: $black;
+    margin-bottom: 96px;
+  }
+
+  .info-rights {
+    font-family: $conv-gilroy-light;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: $black;
+  }
+
+  .nav-title {
+    font-family: $conv-gilroy-extra;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #161616;
+    margin-bottom: 39px;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 47px;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    font-family: $conv-gilroy-light;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: $black;
+    margin-bottom: 20px;
+  }
+
+  .social-link {
+    margin-right: 10px;
+  }
+
+  .contact {
+    margin-bottom: 48px;
+  }
+
+  .contacts-title {
+    font-family: $conv-gilroy-extra;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #161616;
+    margin-bottom: 24px;
+  }
+
+  .address-title {
+    font-family: $conv-gilroy-light;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: $grey;
+    margin-bottom: 14px;
+  }
+
+  .address-subtitle {
+    font-family: $conv-gilroy-light;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: $black;
+  }
+}
+

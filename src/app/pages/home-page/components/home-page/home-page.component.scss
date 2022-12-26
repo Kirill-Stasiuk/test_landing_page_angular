@@ -3,6 +3,13 @@
 .home-wrap {
   display: flex;
 
+  &__text {
+    flex: 1 1 50%;
+    margin-left: 240px;
+    align-self: center;
+  }
+
+
   .home-title {
     width: 479px;
     font-family: $conv-bn-chester;
@@ -26,9 +33,7 @@
   }
 
   &__image {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 45%;
+    flex: 1 1 50%;
+    width: 50%;
   }
 }
