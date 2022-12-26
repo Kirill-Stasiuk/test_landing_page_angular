@@ -1,1 +1,9 @@
-<p>service-list works!</p>
+<div class="services">
+  <ng-container *ngFor="let service of serviceList">
+    <div class="services-desc">
+      <img class="services-image" [src]="service.img" [alt]="service.alt">
+      <h2 class="services-title">{{ service.title }}</h2>
+      <p class="services-subtitle">{{ service.desc }}</p>
+    </div>
+  </ng-container>
+</div>

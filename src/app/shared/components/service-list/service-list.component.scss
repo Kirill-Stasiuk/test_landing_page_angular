@@ -1,0 +1,35 @@
+@import 'src/styles/variables';
+
+.services {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 84px;
+
+  .services-image {
+    margin-bottom: 42px;
+  }
+
+  .services-desc {
+    text-align: center;
+  }
+
+  .services-title {
+    font-family: $conv-gilroy-light;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: $black;
+    margin-bottom: 19px;
+  }
+
+  .services-subtitle {
+    width: 270px;
+    font-family: $conv-gilroy-light;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 170%;
+    color: $grey;
+  }
+}
