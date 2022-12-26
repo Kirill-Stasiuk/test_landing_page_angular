@@ -11,14 +11,14 @@
       <nav class="navigation">
         <h3 class="nav-title">Navigation</h3>
         <ul class="nav-links">
-          <ng-container *ngFor="let link of footerLinks">
-            <a class="nav-link" href="#">{{ link.text }}</a>
+          <ng-container *ngFor="let footerLink of footerLinks">
+            <a [routerLink]="footerLink.link" class="nav-link">{{ footerLink.text }}</a>
           </ng-container>
         </ul>
 
         <div class="social-links">
           <ng-container *ngFor="let social of socialMedia">
-            <a><img class="social-link" [src]="social.img" [alt]="social.alt"></a>
+            <a [href]="social.link"><img class="social-link" [src]="social.img" [alt]="social.alt"></a>
           </ng-container>
         </div>
       </nav>

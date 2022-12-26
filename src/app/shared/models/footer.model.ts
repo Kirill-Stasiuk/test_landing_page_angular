@@ -4,6 +4,7 @@ export interface FooterLinks {
 }
 
 export interface SocialMedia {
+  readonly link: string
   readonly alt: string
   readonly img: string
 }
