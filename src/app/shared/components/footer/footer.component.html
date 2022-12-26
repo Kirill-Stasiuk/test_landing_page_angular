@@ -1,44 +1,42 @@
 <footer>
-  <div class="container">
-    <div class="wrap">
-      <div class="info">
-        <a routerLink="/"><img class="info-img" src="/assets/images/logo.svg" alt="logo"></a>
-        <p class="info-text">We are one of the leading interior design and remodeling studios available for all of your
-          residential and commercial interior design needs.</p>
-        <p class="info-rights">© 2023 id Studio. All Rights Reserved.</p>
+  <div class="wrap">
+    <div class="info">
+      <a routerLink="/"><img class="info-img" src="/assets/images/logo.svg" alt="logo"></a>
+      <p class="info-text">We are one of the leading interior design and remodeling studios available for all of your
+        residential and commercial interior design needs.</p>
+      <p class="info-rights">© 2023 id Studio. All Rights Reserved.</p>
+    </div>
+
+    <nav class="navigation">
+      <h3 class="nav-title">Navigation</h3>
+      <ul class="nav-links">
+        <ng-container *ngFor="let footerLink of footerLinks">
+          <a [routerLink]="footerLink.link" class="nav-link">{{ footerLink.text }}</a>
+        </ng-container>
+      </ul>
+
+      <div class="social-links">
+        <ng-container *ngFor="let social of socialMedia">
+          <a [href]="social.link"><img class="social-link" [src]="social.img" [alt]="social.alt"></a>
+        </ng-container>
       </div>
+    </nav>
 
-      <nav class="navigation">
-        <h3 class="nav-title">Navigation</h3>
-        <ul class="nav-links">
-          <ng-container *ngFor="let footerLink of footerLinks">
-            <a [routerLink]="footerLink.link" class="nav-link">{{ footerLink.text }}</a>
-          </ng-container>
-        </ul>
-
-        <div class="social-links">
-          <ng-container *ngFor="let social of socialMedia">
-            <a [href]="social.link"><img class="social-link" [src]="social.img" [alt]="social.alt"></a>
-          </ng-container>
-        </div>
-      </nav>
-
-      <div class="contacts">
-        <h2 class="contacts-title">Contacts</h2>
-        <div class="contact">
-          <h3 class="address-title">ADDRESS</h3>
-          <p class="address-subtitle">3517 W. Gray St. Utica, Pennsylvania 57867</p>
-        </div>
-        <div class="contact">
-          <h3 class="address-title">EMAIL</h3>
-          <p class="address-subtitle">michelle.rivera@idstudio.com</p>
-        </div>
-        <div class="contact">
-          <h3 class="address-title">PHONES</h3>
-          <p class="address-subtitle">(808) 555-0111
-            or
-            (303) 555-0105</p>
-        </div>
+    <div class="contacts">
+      <h2 class="contacts-title">Contacts</h2>
+      <div class="contact">
+        <h3 class="address-title">ADDRESS</h3>
+        <p class="address-subtitle">3517 W. Gray St. Utica, Pennsylvania 57867</p>
+      </div>
+      <div class="contact">
+        <h3 class="address-title">EMAIL</h3>
+        <p class="address-subtitle">michelle.rivera@idstudio.com</p>
+      </div>
+      <div class="contact">
+        <h3 class="address-title">PHONES</h3>
+        <p class="address-subtitle">(808) 555-0111
+          or
+          (303) 555-0105</p>
       </div>
     </div>
   </div>

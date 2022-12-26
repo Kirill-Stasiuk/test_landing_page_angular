@@ -1,9 +1,8 @@
 @import '/src/styles/variables';
 
 .header {
-  position: absolute;
+  position: relative;
   z-index: 5;
-  width: 70%;
   display: flex;
   align-items: center;
   justify-content: space-between;

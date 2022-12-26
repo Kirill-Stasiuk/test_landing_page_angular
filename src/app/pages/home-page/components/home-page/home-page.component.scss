@@ -1,12 +1,16 @@
 @import "/src/styles/variables";
 
+.grid {
+  display: grid;
+}
+
 .home-wrap {
-  margin-top: -101px;
+  margin-top: -168px;
   display: flex;
 
   &__text {
     flex: 1 1 50%;
-    margin-left: 240px;
+    padding-left: 160px;
     align-self: center;
   }
 
