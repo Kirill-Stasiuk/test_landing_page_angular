@@ -1,22 +1,23 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from "@angular/core"
+import { BrowserModule } from "@angular/platform-browser"
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './shared/components/header/header.component';
-import { FooterComponent } from './shared/components/footer/footer.component';
+import { AppRoutingModule } from "./app-routing.module"
+import { AppComponent } from "./app.component"
+import { HeaderComponent } from "./shared/components/header/header.component"
+import { FooterComponent } from "./shared/components/footer/footer.component"
+import { HomePageComponent } from "./pages/home-page/components/home-page/home-page.component";
+import { ButtonComponent } from './shared/components/button/button.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
+    HomePageComponent,
+    ButtonComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
