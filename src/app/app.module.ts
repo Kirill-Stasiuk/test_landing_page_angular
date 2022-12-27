@@ -7,8 +7,9 @@ import { HeaderComponent } from "./shared/components/header/header.component"
 import { FooterComponent } from "./shared/components/footer/footer.component"
 import { HomePageComponent } from "./pages/home-page/components/home-page/home-page.component"
 import { ButtonComponent } from "./shared/components/button/button.component"
-import { ServicesPageComponent } from "./pages/services-page/components/services-page/services-page.component";
-import { ServiceListComponent } from './shared/components/service-list/service-list.component'
+import { ServicesPageComponent } from "./pages/services-page/components/services-page/services-page.component"
+import { ServiceListComponent } from "./shared/components/service-list/service-list.component"
+import { PortfolioPageComponent } from "./pages/portfolio-page/components/portfolio-page/portfolio-page.component"
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ServiceListComponent } from './shared/components/service-list/service-l
     FooterComponent,
     HomePageComponent,
     ServicesPageComponent,
+    PortfolioPageComponent,
     ButtonComponent,
     ServiceListComponent,
   ],

@@ -1,0 +1,21 @@
+<div class="container">
+  <h1 class="portfolio-title">Our <span>Portfolio</span></h1>
+
+  <div class="cards">
+    <div class="params">
+      <div class="filters">
+        <button *ngFor="let filter of filters" [class.active]="activeTab === filter.index" (click)="setActive(filter.index)" class="params-button">
+          {{ filter.text | uppercase }}
+        </button>
+      </div>
+      <button class="view-more">View more</button>
+    </div>
+
+    <div class="card">
+      <ng-container *ngFor="let work of projectPortfolio">
+        <img [src]="work.image" alt="work">
+      </ng-container>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,75 @@
+@import 'src/styles/variables';
+
+.portfolio-title {
+  text-align: center;
+  font-family: $conv-bn-chester;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 39px;
+  color: $black;
+  margin-bottom: 85px;
+
+  & span {
+    color: $light-orange;
+  }
+}
+
+.cards {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding-bottom: 78px;
+
+  .card {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+
+    & img {
+      object-fit: cover;
+    }
+  }
+}
+
+.params {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .view-more {
+    font-family: $conv-gilroy-light;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    color: $black;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .params-button {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    font-family: $conv-gilroy-light;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: $black;
+    margin-right: 59px;
+    transition: .3s;
+
+    &.active {
+      color: $light-orange;
+      font-weight: 600;
+    }
+
+    &:hover {
+      color: $light-orange;
+    }
+  }
+
+
+}
