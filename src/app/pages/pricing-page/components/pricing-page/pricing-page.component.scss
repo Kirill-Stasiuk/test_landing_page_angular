@@ -1,0 +1,84 @@
+@import 'src/styles/variables';
+
+.pricing-title {
+  text-align: center;
+  font-family: $conv-bn-chester;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 39px;
+  color: $black;
+  margin-bottom: 70px;
+
+  & span {
+    color: $light-orange;
+  }
+}
+
+.card-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 102px;
+
+  .card {
+    text-align: center;
+    background: #FDFBF8;
+    border: 2px solid #D3A265;
+    border-radius: 10px;
+    padding: 32px 80px;
+
+    &:not(:last-child) {
+      margin-right: 84px;
+    }
+
+    &-title {
+      font-family: $conv-bn-chester;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 23px;
+      color: $black;
+      margin-bottom: 31px;
+    }
+
+    &-amount {
+      font-family: $conv-bn-chester;
+      font-weight: 400;
+      font-size: 44px;
+      line-height: 43px;
+      color: $black;
+      margin-bottom: 7px;
+    }
+
+    &-month {
+      font-family: $conv-bn-chester;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 17px;
+      color: $black;
+      margin-bottom: 27px;
+    }
+
+    .feature {
+      padding-top: 27px;
+      border-top: 1px solid #DCD1BB;
+      margin-bottom: 54px;
+    }
+
+    .feature-desc {
+      font-family: $conv-gilroy-light;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 180%;
+      color: $black;
+    }
+  }
+
+  .active-card {
+    background-color: $light-orange;
+
+    p, h1, h2, .feature-desc {
+      color: #fff;
+    }
+  }
+}
+

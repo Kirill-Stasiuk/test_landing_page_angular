@@ -1,0 +1,16 @@
+<div class="container">
+  <h1 class="pricing-title">Our <span>Pricing</span></h1>
+  <div class="card-wrap">
+    <ng-container *ngFor="let card of pricingCard">
+      <div class="card" [ngClass]="card.isActive ? 'active-card' : ''">
+        <h2 class="card-title">{{ card.type }}</h2>
+        <h1 class="card-amount">${{ card.price }}</h1>
+        <p class="card-month">per month</p>
+        <div class="feature">
+          <div *ngFor="let feature of card.description" class="feature-desc">{{ feature }}</div>
+        </div>
+        <app-button [text]="'Buy now'"></app-button>
+      </div>
+    </ng-container>
+  </div>
+</div>

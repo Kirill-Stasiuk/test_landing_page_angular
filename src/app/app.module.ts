@@ -10,6 +10,7 @@ import { ButtonComponent } from "./shared/components/button/button.component"
 import { ServicesPageComponent } from "./pages/services-page/components/services-page/services-page.component"
 import { ServiceListComponent } from "./shared/components/service-list/service-list.component"
 import { PortfolioPageComponent } from "./pages/portfolio-page/components/portfolio-page/portfolio-page.component"
+import { PricingPageComponent } from "./pages/pricing-page/components/pricing-page/pricing-page.component"
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { PortfolioPageComponent } from "./pages/portfolio-page/components/portfo
     PortfolioPageComponent,
     ButtonComponent,
     ServiceListComponent,
+    PricingPageComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
