@@ -32,6 +32,13 @@ const routes: Routes = [
       ),
   },
   {
+    path: "testimonials",
+    loadChildren: () =>
+      import("src/app/pages/testimonials-page/testimonials-page.module").then(
+        (m) => m.TestimonialsPageModule
+      ),
+  },
+  {
     path: "**",
     component: ErrorPageComponent,
   },

@@ -8,6 +8,8 @@ import { FooterComponent } from "./shared/components/footer/footer.component"
 import { PortfolioPageComponent } from "./pages/portfolio-page/components/portfolio-page/portfolio-page.component"
 import { PricingPageComponent } from "./pages/pricing-page/components/pricing-page/pricing-page.component"
 import { ButtonModule } from "./shared/components/button/button.module"
+import { AboutComponent } from "./shared/components/about/about.component"
+import { ContactComponent } from "./shared/components/contact/contact.component"
 
 @NgModule({
   declarations: [
@@ -15,7 +17,6 @@ import { ButtonModule } from "./shared/components/button/button.module"
     HeaderComponent,
     FooterComponent,
     PortfolioPageComponent,
-    PricingPageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ButtonModule],
   providers: [],

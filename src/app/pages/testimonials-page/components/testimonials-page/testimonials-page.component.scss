@@ -1,0 +1,15 @@
+@import 'src/styles/variables';
+
+.review-title {
+  text-align: center;
+  font-family: $conv-bn-chester;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 39px;
+  color: $black;
+  margin-bottom: 87px;
+
+  & span {
+    color: $light-orange;
+  }
+}

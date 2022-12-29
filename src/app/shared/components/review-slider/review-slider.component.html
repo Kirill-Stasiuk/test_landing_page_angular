@@ -1,0 +1,26 @@
+<div class="slider">
+  <swiper [config]="swiperConfig" class="swiper-container">
+    <ng-template swiperSlide *ngFor="let item of reviewSlide">
+      <div class="card-user">
+        <div class="user">
+          <img [src]="item.avatar" alt="avatar" class="card-avatar">
+
+          <div class="user-data">
+            <h3 class="user-name">{{ item.name }}</h3>
+            <h3 class="user-job">{{ item.job }}</h3>
+
+            <div class="social-media">
+              <a [href]="item.twitter"><img src="assets/images/twitter.svg" alt="media"></a>
+              <a [href]="item.linkedin"><img src="assets/images/likedin.svg" alt="media"></a>
+              <a [href]="item.facebook"><img src="assets/images/facebook.svg" alt="media"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-description">
+          <p class="desc">{{ item.desc }}</p>
+        </div>
+      </div>
+    </ng-template>
+  </swiper>
+</div>

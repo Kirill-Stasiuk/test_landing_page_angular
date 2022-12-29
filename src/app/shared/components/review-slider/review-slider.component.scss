@@ -1,0 +1,71 @@
+@import 'src/styles/variables';
+@import "~swiper/swiper-bundle.css";
+
+.slider {
+  max-width: 1190px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+
+.swiper-pagination {
+  max-width: 1170px;
+}
+
+.swiper-pagination-bullet {
+  background: $light-orange;
+  width: 13px;
+  height: 13px;
+}
+
+.card-user {
+  background: #F4F4F4;
+  border-radius: 10px;
+  width: 570px;
+  height: 400px;
+  margin-bottom: 72px;
+
+  .user {
+    display: flex;
+    align-items: center;
+
+    .card-avatar {
+      padding: 36px 30px 36px 91px;
+    }
+
+    .user-name {
+      font-family: $conv-gilroy-light;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+      color: $black;
+      margin-bottom: 7px;
+    }
+
+    .user-job {
+      font-family: $conv-gilroy-light;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      color: $light-grey;
+      margin-bottom: 38px;
+    }
+
+    .social-media {
+      & a {
+        margin-right: 12px;
+      }
+    }
+  }
+
+  .card-description {
+    & p {
+      font-family: $conv-gilroy-light;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 170%;
+      color: $black;
+      padding: 0 65px 36px 100px;
+    }
+  }
+}

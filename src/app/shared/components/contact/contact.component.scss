@@ -1,0 +1,22 @@
+@import 'src/styles/variables';
+
+.contact {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 73px 0;
+
+  &-title {
+    font-family: $conv-bn-chester;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 41px;
+    letter-spacing: 0.005em;
+    color: $black;
+    //margin-right: 300px;
+
+    & span {
+      color: $light-orange;
+    }
+  }
+}

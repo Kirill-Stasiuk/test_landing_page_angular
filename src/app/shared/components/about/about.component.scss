@@ -1,0 +1,32 @@
+@import 'src/styles/variables';
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 71px 0;
+
+  &-title {
+    font-family: $conv-bn-chester;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 41px;
+    letter-spacing: 0.005em;
+    color: $black;
+
+    & span {
+      color: $light-orange;
+    }
+  }
+
+  &-desc {
+    width: 570px;
+    font-family: $conv-gilroy-light;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 170%;
+    color: $black;
+    margin-right: 120px;
+  }
+}
