@@ -1,26 +1,39 @@
 import { NgModule } from "@angular/core"
 import { RouterModule, Routes } from "@angular/router"
-import { HomePageComponent } from "./pages/home-page/components/home-page/home-page.component"
-import { ServicesPageComponent } from "./pages/services-page/components/services-page/services-page.component"
-import { PortfolioPageComponent } from "./pages/portfolio-page/components/portfolio-page/portfolio-page.component"
-import { PricingPageComponent } from "./pages/pricing-page/components/pricing-page/pricing-page.component"
+import { ErrorPageComponent } from "./pages/error-page/components/error-page/error-page.component"
 
 const routes: Routes = [
   {
     path: "",
-    component: HomePageComponent,
+    loadChildren: () =>
+      import("src/app/pages/home-page/home-page.module").then(
+        (m) => m.HomePageModule
+      ),
   },
   {
     path: "services",
-    component: ServicesPageComponent,
+    loadChildren: () =>
+      import("src/app/pages/services-page/services-page.module").then(
+        (m) => m.ServicesPageModule
+      ),
   },
   {
     path: "portfolio",
-    component: PortfolioPageComponent,
+    loadChildren: () =>
+      import("src/app/pages/portfolio-page/portfolio-page.module").then(
+        (m) => m.PortfolioPageModule
+      ),
   },
   {
     path: "pricing",
-    component: PricingPageComponent,
+    loadChildren: () =>
+      import("src/app/pages/pricing-page/pricing-page.module").then(
+        (m) => m.PricingPageModule
+      ),
+  },
+  {
+    path: "**",
+    component: ErrorPageComponent,
   },
 ]
 

@@ -1,0 +1,16 @@
+@import 'src/styles/variables';
+
+.content {
+  text-align: center;
+
+  & span {
+    font-size: 7rem;
+  }
+
+  & p {
+    font-family: $conv-gilroy-light;
+    font-size: 50px;
+    padding-top: 20px;
+    margin-bottom: 40px;
+  }
+}

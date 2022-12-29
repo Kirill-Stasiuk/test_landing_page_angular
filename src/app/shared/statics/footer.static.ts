@@ -19,7 +19,7 @@ export const FOOTER_LINKS: FooterLinks[] = [
   },
   {
     text: "Testimonials",
-    link: "/",
+    link: "/testimonials",
   },
 ]
 

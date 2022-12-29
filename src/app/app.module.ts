@@ -5,28 +5,20 @@ import { AppRoutingModule } from "./app-routing.module"
 import { AppComponent } from "./app.component"
 import { HeaderComponent } from "./shared/components/header/header.component"
 import { FooterComponent } from "./shared/components/footer/footer.component"
-import { HomePageComponent } from "./pages/home-page/components/home-page/home-page.component"
-import { ButtonComponent } from "./shared/components/button/button.component"
-import { ServicesPageComponent } from "./pages/services-page/components/services-page/services-page.component"
-import { ServiceListComponent } from "./shared/components/service-list/service-list.component"
 import { PortfolioPageComponent } from "./pages/portfolio-page/components/portfolio-page/portfolio-page.component"
 import { PricingPageComponent } from "./pages/pricing-page/components/pricing-page/pricing-page.component"
+import { ButtonModule } from "./shared/components/button/button.module"
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HomePageComponent,
-    ServicesPageComponent,
     PortfolioPageComponent,
-    ButtonComponent,
-    ServiceListComponent,
-    PricingPageComponent
+    PricingPageComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, ButtonModule],
   providers: [],
   bootstrap: [AppComponent],
-  exports: [ButtonComponent],
 })
 export class AppModule {}
