@@ -10,6 +10,18 @@
 
 .container {
   padding: 0 160px;
+
+  @media(max-width: 1080px) {
+    padding: 0 100px;
+  }
+
+  @media(max-width: 520px) {
+    padding: 0 35px;
+  }
+
+  @media(max-width: 395px) {
+    padding: 0 15px;
+  }
 }
 
 .active {

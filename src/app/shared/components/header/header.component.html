@@ -1,18 +1,44 @@
-<header class="header">
-  <nav class="header-nav">
-    <a routerLink="/"><img class="logo" src="assets/images/logo.svg" alt="logo"></a>
-    <ng-container *ngFor="let navLink of headerNavLinks">
-      <a class="nav-link" [routerLink]="navLink.link">{{ navLink.text }}</a>
-    </ng-container>
-  </nav>
-  <div class="options">
-    <a class="phone-link" href="tel:+3035550105">(303) 555-0105</a>
-    <select>
-      <ng-container *ngFor="let langPick of languagesOptions">
-        <option>{{ langPick.lang }}</option>
+<div class="container">
+  <header class="header">
+    <nav class="header-nav">
+      <a routerLink="/"><img class="logo" src="assets/images/logo.svg" alt="logo"></a>
+      <ng-container *ngFor="let navLink of headerNavLinks">
+        <a class="nav-link" [routerLink]="navLink.link">{{ navLink.text }}</a>
       </ng-container>
-    </select>
-  </div>
-</header>
+    </nav>
+    <div class="options">
+      <a class="phone-link" href="tel:+3035550105">(303) 555-0105</a>
+      <select>
+        <ng-container *ngFor="let langPick of languagesOptions">
+          <option>{{ langPick.lang }}</option>
+        </ng-container>
+      </select>
+    </div>
+
+
+    <div class="burger">
+      <div class="menu-button">
+        <div (click)="openedMenuBurger = !openedMenuBurger" (clickOutside)="closeModal()" [class._active]="openedMenuBurger" class="menu__icon">
+          <span></span>
+        </div>
+      </div>
+
+      <nav class="burger-nav" *ngIf="openedMenuBurger">
+        <div class="links">
+          <ng-container *ngFor="let navLink of headerNavLinks">
+            <a class="burger-link" [routerLink]="navLink.link">{{ navLink.text }}</a>
+          </ng-container>
+        </div>
+      
+          <a class="phone-link burger-phone" href="tel:+3035550105">(303) 555-0105</a>
+          <select>
+            <ng-container *ngFor="let langPick of languagesOptions">
+              <option>{{ langPick.lang }}</option>
+            </ng-container>
+          </select>
+      </nav>
+    </div>
+  </header>
+</div>
 
 

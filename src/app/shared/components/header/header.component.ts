@@ -8,13 +8,18 @@ import {HEADER_NAV_LINKS, LANGUAGES_OPTIONS} from '../../statics/header.static';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
   headerNavLinks: HeaderNavLinks[] = HEADER_NAV_LINKS;
   languagesOptions: LanguagesOptions[] = LANGUAGES_OPTIONS;
+
+  openedMenuBurger = false;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  closeModal() {
+    this.openedMenuBurger = false;
   }
 
 }

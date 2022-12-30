@@ -22,11 +22,27 @@
   .card {
     margin-top: 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
 
     & img {
       object-fit: cover;
+    }
+
+    @media(max-width: 1200px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media(max-width: 965px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media(max-width: 670px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    @media(max-width: 395px) {
+      place-items: center;
     }
   }
 }
@@ -47,6 +63,10 @@
     background: none;
     border: none;
     cursor: pointer;
+
+    @media(max-width: 769px) {
+      display: none;
+    }
   }
 
   .params-button {
@@ -68,7 +88,19 @@
     &:hover {
       color: $light-orange;
     }
+
+    @media(max-width: 965px) {
+      margin-right: 20px;
+    }
+
+    @media(max-width: 395px) {
+      margin-right: 10px;
+    }
   }
 
-
+  .filters {
+    @media(max-width: 395px) {
+      text-align: center;
+    }
+  }
 }

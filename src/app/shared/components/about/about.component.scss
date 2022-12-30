@@ -2,6 +2,7 @@
 
 .about {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 71px 0;
@@ -28,5 +29,9 @@
     line-height: 170%;
     color: $black;
     margin-right: 120px;
+
+    @media(max-width: 395px) {
+      margin-right: 0;
+    }
   }
 }

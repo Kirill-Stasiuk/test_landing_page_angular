@@ -12,11 +12,29 @@
     flex: 1 1 50%;
     padding-left: 160px;
     align-self: center;
+
+    @media(max-width: 1080px) {
+      padding-top: 170px;
+      padding-left: 50px;
+    }
+
+    @media(max-width: 980px) {
+      padding-bottom: 50px;
+    }
+
+    @media(max-width: 730px) {
+      padding-top: 170px;
+      padding-left: 0;
+    }
+
+    @media(max-width: 520px) {
+      padding-left: 20px;
+    }
   }
 
 
   .home-title {
-    width: 479px;
+    max-width: 479px;
     font-family: $conv-bn-chester;
     font-weight: 400;
     font-size: 66px;
@@ -24,6 +42,10 @@
     letter-spacing: 0.01em;
     color: $brown;
     margin-bottom: 32px;
+
+    @media(max-width: 520px) {
+      font-size: 50px;
+    }
   }
 
   .text {
@@ -35,11 +57,23 @@
     line-height: 170%;
     color: $black;
     margin-bottom: 54px;
+
+    @media(max-width: 395px) {
+      width: 250px;
+    }
   }
 
   &__image {
     flex: 1 1 50%;
     width: 50%;
+
+    @media(max-width: 730px) {
+      width: 100%;
+    }
+  }
+
+  @media(max-width: 730px) {
+    flex-direction: column;
   }
 }
 
