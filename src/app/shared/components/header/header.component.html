@@ -3,7 +3,7 @@
     <nav class="header-nav">
       <a routerLink="/"><img class="logo" src="assets/images/logo.svg" alt="logo"></a>
       <ng-container *ngFor="let navLink of headerNavLinks">
-        <a class="nav-link" [routerLink]="navLink.link">{{ navLink.text }}</a>
+        <a class="nav-link" [routerLink]="navLink.link" routerLinkActive="active">{{ navLink.text }}</a>
       </ng-container>
     </nav>
     <div class="options">
@@ -29,7 +29,7 @@
             <a class="burger-link" [routerLink]="navLink.link">{{ navLink.text }}</a>
           </ng-container>
         </div>
-      
+
           <a class="phone-link burger-phone" href="tel:+3035550105">(303) 555-0105</a>
           <select>
             <ng-container *ngFor="let langPick of languagesOptions">
