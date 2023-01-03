@@ -30,8 +30,42 @@
     color: $black;
     margin-right: 120px;
 
+    @media(max-width: 880px) {
+      width: auto;
+    }
+
     @media(max-width: 395px) {
       margin-right: 0;
     }
+  }
+
+  .upper {
+    margin-bottom: 20px;
+    @media(max-width: 630px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .lower {
+    @media(max-width: 630px) {
+      display: none;
+      margin-bottom: 20px;
+    }
+  }
+
+  .show-about {
+    display: none;
+    @media(max-width: 630px) {
+      display: block;
+      background: none;
+      border: none;
+      font-family: $conv-gilroy-extra;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+  }
+
+  .show-all {
+    display: block;
   }
 }
