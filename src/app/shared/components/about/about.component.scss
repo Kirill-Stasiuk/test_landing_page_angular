@@ -18,6 +18,10 @@
     & span {
       color: $light-orange;
     }
+
+    @media(max-width: 395px) {
+      font-size: 30px;
+    }
   }
 
   &-desc {

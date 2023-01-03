@@ -14,8 +14,10 @@
   .services-desc {
     text-align: center;
 
-    @media(max-width: 395px) {
-      margin-bottom: 20px;
+    @media(max-width: 730px) {
+      margin-bottom: 60px;
+      border-bottom: 1px solid #DCD1BB;
+      padding-bottom: 80px;
     }
   }
 
