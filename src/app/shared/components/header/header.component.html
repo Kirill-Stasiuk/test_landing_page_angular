@@ -8,17 +8,25 @@
     </nav>
     <div class="options">
       <a class="phone-link" href="tel:+3035550105">(303) 555-0105</a>
-      <select>
-        <ng-container *ngFor="let langPick of languagesOptions">
-          <option>{{ langPick.lang }}</option>
-        </ng-container>
-      </select>
+      <div class="language-dropdown" (click)="openDropdown()">
+        <p class="selected-language">{{ selectedLanguage | uppercase }}</p>
+        <svg _ngcontent-ayk-c14="" width="12" height="4" viewBox="0 0 12 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path _ngcontent-ayk-c14="" d="M5.70824 3.87158L0.350764 0.314149L11.0657 0.31415L5.70824 3.87158Z" fill="#161616"></path>
+        </svg>
+
+        <div class="dropdown-body" [class.show-drop]="isShowDropdown" *ngIf="isShowDropdown">
+          <div *ngFor="let language of languagesOptions" class="language-select" (click)="setLanguage(language)">
+            <p>{{ language | uppercase }}</p>
+          </div>
+        </div>
+
+      </div>
     </div>
 
 
     <div class="burger">
       <div class="menu-button">
-        <div (click)="openedMenuBurger = !openedMenuBurger" (clickOutside)="closeModal()" [class._active]="openedMenuBurger" class="menu__icon">
+        <div (click)="openBurger()" [class._active]="openedMenuBurger" class="menu__icon">
           <span></span>
         </div>
       </div>
@@ -30,12 +38,21 @@
           </ng-container>
         </div>
 
-          <a class="phone-link burger-phone" href="tel:+3035550105">(303) 555-0105</a>
-          <select>
-            <ng-container *ngFor="let langPick of languagesOptions">
-              <option>{{ langPick.lang }}</option>
-            </ng-container>
-          </select>
+        <a class="phone-link burger-phone" href="tel:+3035550105">(303) 555-0105</a>
+
+        <div class="language-dropdown selector" (click)="openDropdown()">
+          <p class="selected-language">{{ selectedLanguage | uppercase }}</p>
+          <svg _ngcontent-ayk-c14="" width="12" height="4" viewBox="0 0 12 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path _ngcontent-ayk-c14="" d="M5.70824 3.87158L0.350764 0.314149L11.0657 0.31415L5.70824 3.87158Z" fill="#161616"></path>
+          </svg>
+
+          <div class="dropdown-body burger-selector" [class.show-drop]="isShowDropdown" *ngIf="isShowDropdown">
+            <div *ngFor="let language of languagesOptions" class="language-select" (click)="setLanguage(language)">
+              <p>{{ language | uppercase }}</p>
+            </div>
+          </div>
+
+        </div>
       </nav>
     </div>
   </header>

@@ -16,10 +16,10 @@ import {
 })
 export class PortfolioPageComponent implements OnInit {
   projectPortfolio: PortfolioProject[] = PORTFOLIO_PROJECT
-  filters: Filter[] = FILTERS
   extraData: PortfolioProject[] = EXTRA_DATA
-  allCardLoad: boolean = false
+  filters: Filter[] = FILTERS
 
+  allCardLoad: boolean = false
   activeTab: string = ""
 
   constructor() {}

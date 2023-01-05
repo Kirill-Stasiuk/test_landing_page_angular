@@ -52,7 +52,7 @@
         margin: 0 auto;
         background: none;
         border: none;
-        font-family: $conv-gilroy-extra;
+        font-family: $gilroy;
         cursor: pointer;
         text-transform: uppercase;
       }
@@ -68,7 +68,7 @@
 
 
   .view-more {
-    font-family: $conv-gilroy-light;
+    font-family: $gilroy;
     font-weight: 600;
     font-size: 16px;
     line-height: 20px;
@@ -88,7 +88,7 @@
     cursor: pointer;
     border: none;
     background: transparent;
-    font-family: $conv-gilroy-light;
+    font-family: $gilroy;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
