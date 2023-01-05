@@ -4,6 +4,7 @@ import {
   PortfolioProject,
 } from "../../../../shared/models/portfolio.model"
 import {
+  EXTRA_DATA,
   FILTERS,
   PORTFOLIO_PROJECT,
 } from "../../../../shared/statics/portfolio.static"
@@ -16,6 +17,8 @@ import {
 export class PortfolioPageComponent implements OnInit {
   projectPortfolio: PortfolioProject[] = PORTFOLIO_PROJECT
   filters: Filter[] = FILTERS
+  extraData: PortfolioProject[] = EXTRA_DATA
+  allCardLoad: boolean = false
 
   activeTab: string = ""
 
@@ -27,13 +30,20 @@ export class PortfolioPageComponent implements OnInit {
     this.activeTab = tabIndex
     this.projectPortfolio = []
     PORTFOLIO_PROJECT.forEach((card) => {
-      if (this.checkForFilter(card)) {
+      if (this.checkFilter(card)) {
         this.projectPortfolio.push(card)
       }
     })
   }
 
-  private checkForFilter(card: PortfolioProject): boolean {
+  getMoreData() {
+    EXTRA_DATA.forEach((card) => {
+      this.projectPortfolio.push(card)
+      this.allCardLoad = true
+    })
+  }
+
+  private checkFilter(card: PortfolioProject): boolean {
     return card.categoryId === this.activeTab || this.activeTab === ""
   }
 }

@@ -15,7 +15,7 @@ export const PRICING_CARD: Pricing[] = [
   },
   {
     id: 2,
-    type: "Standard",
+    type: "Standart",
     price: "50",
     description: [
       "Color Analysis",

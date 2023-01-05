@@ -25,36 +25,47 @@
 
   .card {
     margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 
-    & img {
-      object-fit: cover;
+    @media(max-width: 520px) {
+      justify-content: center;
     }
 
-    @media(max-width: 1200px) {
-      grid-template-columns: repeat(3, 1fr);
+    @media(max-width: 420px) {
+      img {
+        width: 100%;
+      }
     }
+  }
 
-    @media(max-width: 965px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
 
-    @media(max-width: 670px) {
-      grid-template-columns: repeat(1, 1fr);
-    }
+  .view {
+    margin-top: 40px;
 
-    @media(max-width: 395px) {
-      place-items: center;
+    .view-more {
+      display: none;
+
+      @media(max-width: 520px) {
+        display: block;
+        margin: 0 auto;
+        background: none;
+        border: none;
+        font-family: $conv-gilroy-extra;
+        cursor: pointer;
+        text-transform: uppercase;
+      }
     }
   }
 }
 
 .params {
   display: flex;
-  align-items: center;
+  flex-wrap: nowrap;
   justify-content: space-between;
+  width: 100%;
+
 
   .view-more {
     font-family: $conv-gilroy-light;
@@ -103,13 +114,14 @@
     }
   }
 
-  .filters {
-    @media(max-width: 395px) {
-      text-align: center;
-    }
-  }
-
-  @media(max-width: 450px) {
+  @media(max-width: 520px) {
     justify-content: center;
+  }
+}
+
+@media(max-width: 520px) {
+  .portfolio-container {
+    padding-left: 0;
+    padding-right: 0;
   }
 }

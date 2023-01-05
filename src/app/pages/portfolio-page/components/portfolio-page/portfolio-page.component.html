@@ -1,4 +1,4 @@
-<div class="container">
+<div class="portfolio-container container">
   <h1 class="portfolio-title">Our <span>Portfolio</span></h1>
 
   <div class="cards">
@@ -15,6 +15,10 @@
       <ng-container *ngFor="let work of projectPortfolio">
         <img [src]="work.image" alt="work">
       </ng-container>
+    </div>
+
+    <div class="view">
+      <button (click)="getMoreData()" *ngIf="!allCardLoad" class="view-more">View more</button>
     </div>
 
   </div>

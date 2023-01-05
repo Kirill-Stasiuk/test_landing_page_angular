@@ -43,6 +43,24 @@ export const PORTFOLIO_PROJECT: PortfolioProject[] = [
   },
 ]
 
+export const EXTRA_DATA: PortfolioProject[] = [
+  {
+    id: 9,
+    image: "assets/images/rooms/Frame%207.png",
+    categoryId: "commercial",
+  },
+  {
+    id: 10,
+    image: "assets/images/rooms/Frame%208.png",
+    categoryId: "commercial",
+  },
+  {
+    id: 11,
+    image: "assets/images/rooms/Frame%209.png",
+    categoryId: "office",
+  },
+]
+
 export const FILTERS: Filter[] = [
   {
     text: "All",
