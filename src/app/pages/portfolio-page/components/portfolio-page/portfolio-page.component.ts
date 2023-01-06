@@ -30,7 +30,7 @@ export class PortfolioPageComponent implements OnInit {
     this.activeTab = tabIndex
     this.projectPortfolio = []
     PORTFOLIO_PROJECT.forEach((card) => {
-      if (this.checkFilter(card)) {
+      if (card.categoryId === this.activeTab || this.activeTab === "") {
         this.projectPortfolio.push(card)
       }
     })
@@ -41,9 +41,5 @@ export class PortfolioPageComponent implements OnInit {
       this.projectPortfolio.push(card)
       this.allCardLoad = true
     })
-  }
-
-  private checkFilter(card: PortfolioProject): boolean {
-    return card.categoryId === this.activeTab || this.activeTab === ""
   }
 }
