@@ -9,8 +9,9 @@ import { PortfolioPageComponent } from "./pages/portfolio-page/components/portfo
 import { PricingPageComponent } from "./pages/pricing-page/components/pricing-page/pricing-page.component"
 import { ButtonModule } from "./shared/components/button/button.module"
 import { AboutComponent } from "./shared/components/about/about.component"
-import { ContactComponent } from "./shared/components/contact/contact.component";
-import { CloseMenuDirective } from './shared/directives/close-menu.directive'
+import { ContactComponent } from "./shared/components/contact/contact.component"
+import { CloseMenuDirective } from "./shared/directives/close-menu.directive"
+import { ContactModalComponent } from "./shared/components/contact-modal/contact-modal.component"
 
 @NgModule({
   declarations: [

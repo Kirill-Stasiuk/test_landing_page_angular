@@ -1,4 +1,6 @@
 <div class="contact">
   <h1 class="contact-title">Do you have <br> <span>any question?</span></h1>
-  <app-button [text]="'order a call'"></app-button>
+  <app-button [text]="'order a call'" (click)="modal = true"></app-button>
 </div>
+
+<app-contact-modal *ngIf="modal" (modal)="modal = false"></app-contact-modal>

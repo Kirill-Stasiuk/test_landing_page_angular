@@ -1,0 +1,27 @@
+<div class="background" (click)="modal.emit()">
+  <div class="modal" (click)="$event.stopPropagation()">
+    <button class="close-button" (click)="modal.emit()">&times;</button>
+    <h1 class="modal-title">Contact <span>Us</span></h1>
+
+    <form [formGroup]="modalForm" class="contact-form" (ngSubmit)="onSubmit()">
+      <div class="form-field">
+        <input formControlName="name" class="form-input" type="text" placeholder="Your name">
+        <small *ngIf="name!.invalid && name!.touched" class="text-danger">First Name is required</small>
+      </div>
+
+      <div class="form-field">
+        <input formControlName="email" class="form-input" type="email" placeholder="Your email">
+        <small *ngIf="email!.invalid && email!.touched" class="text-danger">Email is required</small>
+      </div>
+
+      <div class="form-field">
+        <textarea formControlName="message" class="form-area form-input" placeholder="Your message"></textarea>
+        <small *ngIf="message!.invalid && message!.touched" class="text-danger">Message is required</small>
+      </div>
+
+      <p *ngIf="successMessage" class="success-message">Success!</p>
+
+      <button type="submit" class="submit button" [disabled]="modalForm.invalid" [ngClass]="modalForm.invalid ? 'disable' : ''">Send</button>
+    </form>
+  </div>
+</div>

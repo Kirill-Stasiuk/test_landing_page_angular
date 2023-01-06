@@ -31,7 +31,7 @@
         </div>
       </div>
 
-      <nav class="burger-nav" *ngIf="openedMenuBurger">
+      <nav class="burger-nav" *ngIf="openedMenuBurger" (click)="$event.stopPropagation()">
         <div class="links">
           <ng-container *ngFor="let navLink of headerNavLinks">
             <a class="burger-link" [routerLink]="navLink.link">{{ navLink.text }}</a>
