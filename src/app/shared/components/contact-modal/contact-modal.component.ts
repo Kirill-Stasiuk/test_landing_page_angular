@@ -29,6 +29,10 @@ export class ContactModalComponent implements OnInit {
     console.log(this.modalForm.value)
     this.modalForm.reset()
     this.successMessage = true
+
+    setTimeout(() => {
+      this.successMessage = false
+    }, 3000)
   }
 
   get name() {
