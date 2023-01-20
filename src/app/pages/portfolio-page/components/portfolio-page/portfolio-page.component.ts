@@ -18,6 +18,8 @@ export class PortfolioPageComponent implements OnInit {
   projectPortfolio: PortfolioProject[] = PORTFOLIO_PROJECT
   extraData: PortfolioProject[] = EXTRA_DATA
   filters: Filter[] = FILTERS
+  works = PORTFOLIO_PROJECT
+  extra = EXTRA_DATA
 
   allCardLoad: boolean = false
   activeTab: string = ""
@@ -29,7 +31,7 @@ export class PortfolioPageComponent implements OnInit {
   setActive(tabIndex: string) {
     this.activeTab = tabIndex
     this.projectPortfolio = []
-    PORTFOLIO_PROJECT.forEach((card) => {
+    this.works.forEach((card) => {
       if (card.categoryId === this.activeTab || this.activeTab === "") {
         this.projectPortfolio.push(card)
       }
@@ -37,7 +39,7 @@ export class PortfolioPageComponent implements OnInit {
   }
 
   getMoreData() {
-    EXTRA_DATA.forEach((card) => {
+    this.extra.forEach((card) => {
       this.projectPortfolio.push(card)
       this.allCardLoad = true
     })
