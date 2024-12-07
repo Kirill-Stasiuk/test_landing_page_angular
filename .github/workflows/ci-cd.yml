@@ -70,4 +70,5 @@ jobs:
 
       - name: Push in Docker Hub
         run: |
+          docker build -t kirillstasiukdev/test_landing_page_angular:1.0.0 .
           docker push kirillstasiukdev/test_landing_page_angular:1.0.0
