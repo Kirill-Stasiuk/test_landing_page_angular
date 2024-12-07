@@ -1,0 +1,69 @@
+name: CI/CD for Angular Project
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the code
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # Set up Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      # Install dependencies
+      - name: Install Dependencies
+        run: npm install
+
+      # Build the Angular project
+      - name: Build Angular Project
+        run: npm run build -- --prod
+
+      # Run tests
+      - name: Run Tests
+        run: npm run test -- --watch=false --browsers=ChromeHeadless
+
+  docker-build-and-push:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the code
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # Log in to Docker Hub
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      # Login to Cloud Provider
+      - name: Log in to Google Cloud
+        uses: docker/login-action@v2
+        with:
+          registry: gcr.io
+          username: _json_key
+          password: ${{ secrets.GCLOUD_AUTH }}
+
+      # Build Docker Image
+      - name: Build Docker Image
+        run: |
+          docker build -t gcr.io/mythical-harbor-435609-d3/test-landing:1.0.0 .
+
+      # Push Docker Image
+      - name: Push Docker Image
+        run: |
+          docker push gcr.io/mythical-harbor-435609-d3/test-landing:1.0.0
