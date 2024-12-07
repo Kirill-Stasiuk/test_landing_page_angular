@@ -33,7 +33,7 @@ jobs:
 
       # Run tests
       - name: Run Tests
-        run: npm run test
+        run: npm run test --watch=false --browsers=ChromeHeadless
 
   docker-build-and-push:
     needs: build-and-test
@@ -67,3 +67,7 @@ jobs:
       - name: Push Docker Image
         run: |
           docker push gcr.io/mythical-harbor-435609-d3/test-landing:1.0.0
+
+      - name: Push in Docker Hub
+        run: |
+          docker push kirillstasiukdev/test_landing_page_angular:1.0.0
